@@ -27,4 +27,4 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Build and Push Docker Image
       run: |
-          docker build . --file ./dockerfile -t hellowordl-repo:hellowordlimg$(echo ${GITHUB_SHA} | cut -c1-8)
+          docker build . --file ./Dockerfile -t hellowordl-repo:hellowordlimg$(echo ${GITHUB_SHA} | cut -c1-8)
